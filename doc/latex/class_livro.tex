@@ -1,0 +1,515 @@
+\hypertarget{class_livro}{}\section{Referência à classe Livro}
+\label{class_livro}\index{Livro@{Livro}}
+
+
+Classe com finalidade de registo de um \hyperlink{class_livro}{Livro}.  
+
+
+
+
+{\ttfamily \#include $<$livro.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_livro_a1c7f1cc914e7eb2e3f735d843eff613b}{Livro} (string titulo, string autor, string editora, string ano)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto recebendo todos os parametros. \end{DoxyCompactList}\item 
+\hyperlink{class_livro_a4b89ad279d36589f7337083cdf006861}{Livro} ()
+\item 
+\hyperlink{class_livro_a8466800b3027e525d947985566c3b45f}{Livro} (vector$<$ string $>$ \&)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto a partir de um vector de string (tras consigo os parametros) Utilizado em leitura de banco de dados. \end{DoxyCompactList}\item 
+string \hyperlink{class_livro_af9521ac8f161bc215f50b0a626163105}{get\+Titulo} ()
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel titulo de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+string \hyperlink{class_livro_a47ea912e8e6ae63aedfd7c46ddb94c1b}{get\+Autor} ()
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel autor de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+string \hyperlink{class_livro_ae575086862269d15a4edeb45986c02d3}{get\+Editora} ()
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel editora de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+string \hyperlink{class_livro_aa5ad8529cea36c240e19a063da9fceb8}{get\+Ano} ()
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel ano de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+\hyperlink{class_livro}{Livro} $\ast$ \hyperlink{class_livro_ac7fc0b0494f653cacb64f51f9103f1b5}{get\+Next} ()
+\begin{DoxyCompactList}\small\item\em retorna um ponteiro do proximo objeto em uma lista encadeada \end{DoxyCompactList}\item 
+\hyperlink{class_livro}{Livro} $\ast$ \hyperlink{class_livro_a742900b43e07423fd79e2a03dab5e12b}{get\+Previous} ()
+\begin{DoxyCompactList}\small\item\em retorna um ponteiro do objeto anterior em uma lista encadeada \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_adbae26ce6938e1f56ed6d88b458351c7}{set\+Titulo} (string titulo)
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel titulo de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_ab6979584fef48cc9b2ca4dc0359dd69d}{set\+Autor} (string autor)
+\begin{DoxyCompactList}\small\item\em Função para modificar o autor do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_a872239a75a304f78e8b06fd3a5cb7b32}{set\+Editora} (string editora)
+\begin{DoxyCompactList}\small\item\em Função para modificar o editora do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_a7a5d33fab8e1035fe0b3a20ab398cf54}{set\+Ano} (string ano)
+\begin{DoxyCompactList}\small\item\em Função para modificar o editora do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_a404dde562015b86c989e7407b03f2d71}{set\+Next} (\hyperlink{class_livro}{Livro} $\ast$proximo)
+\begin{DoxyCompactList}\small\item\em Função para modificar o ponteiro do proximo objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_livro_a93e3b1c1f9adf1974dae564acd18b71b}{set\+Previous} (\hyperlink{class_livro}{Livro} $\ast$anterior)
+\begin{DoxyCompactList}\small\item\em Função para modificar o ponteiro do objeto anterior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_livro_aaa48373327454aabb96ba8d7f5835963}{T\+AG} = titulo
+\begin{DoxyCompactList}\small\item\em Marcar os objetos com um unico identificador, tornando assim uma busca generia em todos os tipos de objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_livro_a7fe67fc2cf13c93b17992ecb006cdb80}{operator$<$$<$} (ostream \&, \hyperlink{class_livro}{Livro} \&)
+\begin{DoxyCompactList}\small\item\em função sorecarregada para imprimir o este objeto \end{DoxyCompactList}\item 
+istream \& \hyperlink{class_livro_ad5bddb8ab23283c6b4a82ffedd1988f4}{operator$>$$>$} (istream \&, \hyperlink{class_livro}{Livro} \&)
+\begin{DoxyCompactList}\small\item\em função sorecarregada para receber o este objeto \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe com finalidade de registo de um \hyperlink{class_livro}{Livro}. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\index{Livro@{Livro}!Livro@{Livro}}
+\index{Livro@{Livro}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{Livro(string titulo, string autor, string editora, string ano)}{Livro(string titulo, string autor, string editora, string ano)}}]{\setlength{\rightskip}{0pt plus 5cm}Livro\+::\+Livro (
+\begin{DoxyParamCaption}
+\item[{string}]{titulo, }
+\item[{string}]{autor, }
+\item[{string}]{editora, }
+\item[{string}]{ano}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a1c7f1cc914e7eb2e3f735d843eff613b}{}\label{class_livro_a1c7f1cc914e7eb2e3f735d843eff613b}
+
+
+Construtor de um objeto recebendo todos os parametros. 
+
+Construtor de um objeto a patir de strings como argumento.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Titulo do livro \\
+\hline
+{\em autor} & Autor do livro$\ast$ \\
+\hline
+{\em editora} & Editora do livro \\
+\hline
+{\em ano} & Ano da edição \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+17                                                                    :
+18         titulo(titulo),
+19         autor(autor),
+20         editora(editora),
+21         ano(ano),
+22         next(NULL),
+23         previous(NULL)
+24         \{\}
+\end{DoxyCode}
+\index{Livro@{Livro}!Livro@{Livro}}
+\index{Livro@{Livro}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{Livro()}{Livro()}}]{\setlength{\rightskip}{0pt plus 5cm}Livro\+::\+Livro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a4b89ad279d36589f7337083cdf006861}{}\label{class_livro_a4b89ad279d36589f7337083cdf006861}
+Costrutor de um objeto vazio 
+\begin{DoxyCode}
+41             :
+42         titulo(\textcolor{stringliteral}{" "}),
+43         autor(\textcolor{stringliteral}{" "}),
+44         editora(\textcolor{stringliteral}{" "}),
+45         ano(\textcolor{stringliteral}{" "}),
+46         next(NULL),
+47         previous(NULL)
+48         \{\}
+\end{DoxyCode}
+\index{Livro@{Livro}!Livro@{Livro}}
+\index{Livro@{Livro}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{Livro(vector$<$ string $>$ \&)}{Livro(vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}Livro\+::\+Livro (
+\begin{DoxyParamCaption}
+\item[{vector$<$ string $>$ \&}]{palavra}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a8466800b3027e525d947985566c3b45f}{}\label{class_livro_a8466800b3027e525d947985566c3b45f}
+
+
+Construtor de um objeto a partir de um vector de string (tras consigo os parametros) Utilizado em leitura de banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em palavra} & Um vector de string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+30                                    :
+31         titulo(palavra[0]),
+32         autor(palavra[1]),
+33         editora(palavra[2]),
+34         ano(palavra[3]),
+35         next(NULL),
+36         previous(NULL)
+37         \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentação dos métodos}
+\index{Livro@{Livro}!get\+Ano@{get\+Ano}}
+\index{get\+Ano@{get\+Ano}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Ano()}{getAno()}}]{\setlength{\rightskip}{0pt plus 5cm}string Livro\+::get\+Ano (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_aa5ad8529cea36c240e19a063da9fceb8}{}\label{class_livro_aa5ad8529cea36c240e19a063da9fceb8}
+
+
+Função para retornar a variavel ano de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel ano do livro.
+
+\begin{DoxyReturn}{Retorna}
+ano 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+69 \{\textcolor{keywordflow}{return} ano;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!get\+Autor@{get\+Autor}}
+\index{get\+Autor@{get\+Autor}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Autor()}{getAutor()}}]{\setlength{\rightskip}{0pt plus 5cm}string Livro\+::get\+Autor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a47ea912e8e6ae63aedfd7c46ddb94c1b}{}\label{class_livro_a47ea912e8e6ae63aedfd7c46ddb94c1b}
+
+
+Função para retornar a variavel autor de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel autor do livro.
+
+\begin{DoxyReturn}{Retorna}
+autor 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+59 \{\textcolor{keywordflow}{return} autor;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!get\+Editora@{get\+Editora}}
+\index{get\+Editora@{get\+Editora}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Editora()}{getEditora()}}]{\setlength{\rightskip}{0pt plus 5cm}string Livro\+::get\+Editora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_ae575086862269d15a4edeb45986c02d3}{}\label{class_livro_ae575086862269d15a4edeb45986c02d3}
+
+
+Função para retornar a variavel editora de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel editora do livro.
+
+\begin{DoxyReturn}{Retorna}
+editora 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+64 \{\textcolor{keywordflow}{return} editora;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Next()}{getNext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Livro} $\ast$ Livro\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_ac7fc0b0494f653cacb64f51f9103f1b5}{}\label{class_livro_ac7fc0b0494f653cacb64f51f9103f1b5}
+
+
+retorna um ponteiro do proximo objeto em uma lista encadeada 
+
+Fução para retornar o ponteiro da variavel next do livro.
+
+\begin{DoxyReturn}{Retorna}
+next 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+74 \{\textcolor{keywordflow}{return} this->next;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!get\+Previous@{get\+Previous}}
+\index{get\+Previous@{get\+Previous}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Previous()}{getPrevious()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Livro} $\ast$ Livro\+::get\+Previous (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a742900b43e07423fd79e2a03dab5e12b}{}\label{class_livro_a742900b43e07423fd79e2a03dab5e12b}
+
+
+retorna um ponteiro do objeto anterior em uma lista encadeada 
+
+Fução para retornar o ponteiro da variavel previous do livro.
+
+\begin{DoxyReturn}{Retorna}
+previous 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+79 \{\textcolor{keywordflow}{return} this->previous;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!get\+Titulo@{get\+Titulo}}
+\index{get\+Titulo@{get\+Titulo}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{get\+Titulo()}{getTitulo()}}]{\setlength{\rightskip}{0pt plus 5cm}string Livro\+::get\+Titulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_af9521ac8f161bc215f50b0a626163105}{}\label{class_livro_af9521ac8f161bc215f50b0a626163105}
+
+
+Função para retornar a variavel titulo de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel titulo do livro.
+
+\begin{DoxyReturn}{Retorna}
+autor
+
+titulo 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+54 \{\textcolor{keywordflow}{return} titulo;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Ano@{set\+Ano}}
+\index{set\+Ano@{set\+Ano}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Ano(string ano)}{setAno(string ano)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Ano (
+\begin{DoxyParamCaption}
+\item[{string}]{ano}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a7a5d33fab8e1035fe0b3a20ab398cf54}{}\label{class_livro_a7a5d33fab8e1035fe0b3a20ab398cf54}
+
+
+Função para modificar o editora do objeto. 
+
+Função para modificar a variavel ano do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & editora\\
+\hline
+{\em ano} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+101 \{this->ano = ano;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Autor@{set\+Autor}}
+\index{set\+Autor@{set\+Autor}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Autor(string autor)}{setAutor(string autor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Autor (
+\begin{DoxyParamCaption}
+\item[{string}]{autor}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_ab6979584fef48cc9b2ca4dc0359dd69d}{}\label{class_livro_ab6979584fef48cc9b2ca4dc0359dd69d}
+
+
+Função para modificar o autor do objeto. 
+
+Função para modificar a variavel autor do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & autor\\
+\hline
+{\em autor} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+91 \{this->autor = autor;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Editora@{set\+Editora}}
+\index{set\+Editora@{set\+Editora}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Editora(string editora)}{setEditora(string editora)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Editora (
+\begin{DoxyParamCaption}
+\item[{string}]{editora}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a872239a75a304f78e8b06fd3a5cb7b32}{}\label{class_livro_a872239a75a304f78e8b06fd3a5cb7b32}
+
+
+Função para modificar o editora do objeto. 
+
+Função para modificar a variavel editora do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & editora\\
+\hline
+{\em editora} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+96 \{this->editora = editora;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Next(\+Livro $\ast$proximo)}{setNext(Livro *proximo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Livro} $\ast$}]{proximo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a404dde562015b86c989e7407b03f2d71}{}\label{class_livro_a404dde562015b86c989e7407b03f2d71}
+
+
+Função para modificar o ponteiro do proximo objeto. 
+
+Função para modificar o ponteiro da variavel next do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$proximo} & \\
+\hline
+{\em next} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+106 \{this->next = proximo;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Previous@{set\+Previous}}
+\index{set\+Previous@{set\+Previous}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Previous(\+Livro $\ast$anterior)}{setPrevious(Livro *anterior)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Previous (
+\begin{DoxyParamCaption}
+\item[{{\bf Livro} $\ast$}]{anterior}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_a93e3b1c1f9adf1974dae564acd18b71b}{}\label{class_livro_a93e3b1c1f9adf1974dae564acd18b71b}
+
+
+Função para modificar o ponteiro do objeto anterior. 
+
+Função para modificar o ponteiro da variavel previous do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$anteior} & \\
+\hline
+{\em previous} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+111 \{this->previous = anterior;\}
+\end{DoxyCode}
+\index{Livro@{Livro}!set\+Titulo@{set\+Titulo}}
+\index{set\+Titulo@{set\+Titulo}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{set\+Titulo(string titulo)}{setTitulo(string titulo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Livro\+::set\+Titulo (
+\begin{DoxyParamCaption}
+\item[{string}]{titulo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_livro_adbae26ce6938e1f56ed6d88b458351c7}{}\label{class_livro_adbae26ce6938e1f56ed6d88b458351c7}
+
+
+Função para retornar a variavel titulo de um objeto \hyperlink{class_livro}{Livro}. 
+
+Função para modificar a variavel titulo do objeto.
+
+\begin{DoxyReturn}{Retorna}
+titulo Função para modificar o titulo do objeto 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & titulo\\
+\hline
+{\em titulo} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+86 \{this->titulo = titulo;\}
+\end{DoxyCode}
+
+
+\subsection{Documentação das classes amigas e funções relacionadas}
+\index{Livro@{Livro}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Livro} \&}]{livro}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_livro_a7fe67fc2cf13c93b17992ecb006cdb80}{}\label{class_livro_a7fe67fc2cf13c93b17992ecb006cdb80}
+
+
+função sorecarregada para imprimir o este objeto 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&livro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+121                                              \{
+122    
+123     o << livro.\hyperlink{class_livro_af9521ac8f161bc215f50b0a626163105}{getTitulo}() <<\textcolor{stringliteral}{" ;"};
+124     o << livro.\hyperlink{class_livro_a47ea912e8e6ae63aedfd7c46ddb94c1b}{getAutor}() <<\textcolor{stringliteral}{" ;"};
+125     o << livro.\hyperlink{class_livro_ae575086862269d15a4edeb45986c02d3}{getEditora}() <<\textcolor{stringliteral}{" ;Ano "};
+126     o << livro.\hyperlink{class_livro_aa5ad8529cea36c240e19a063da9fceb8}{getAno}() <<\textcolor{stringliteral}{"."};
+127 
+128     \textcolor{keywordflow}{return} o;
+129 \}
+\end{DoxyCode}
+\index{Livro@{Livro}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Livro} \&}]{livro}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_livro_ad5bddb8ab23283c6b4a82ffedd1988f4}{}\label{class_livro_ad5bddb8ab23283c6b4a82ffedd1988f4}
+
+
+função sorecarregada para receber o este objeto 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&in} & \\
+\hline
+{\em \&livro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+in 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+136                                               \{
+137     
+138     \textcolor{keywordtype}{string} xtitulo, xautor, xeditora, xano;
+139     cout << \textcolor{stringliteral}{"Titulo: "};
+140     in >> xtitulo;
+141     cout << \textcolor{stringliteral}{"Autor: "};
+142     in >> xautor;
+143     cout << \textcolor{stringliteral}{"Editora: "};
+144     in >> xeditora;
+145     cout << \textcolor{stringliteral}{"Ano: "};
+146     in >> xano;
+147 
+148     livro.\hyperlink{class_livro_adbae26ce6938e1f56ed6d88b458351c7}{setTitulo}(xtitulo);
+149     livro.\hyperlink{class_livro_ab6979584fef48cc9b2ca4dc0359dd69d}{setAutor}(xautor);
+150     livro.\hyperlink{class_livro_a872239a75a304f78e8b06fd3a5cb7b32}{setEditora}(xeditora);
+151     livro.\hyperlink{class_livro_a7a5d33fab8e1035fe0b3a20ab398cf54}{setAno}(xano);
+152     livro.\hyperlink{class_livro_aaa48373327454aabb96ba8d7f5835963}{TAG} = xtitulo;
+153 
+154     \textcolor{keywordflow}{return} in;
+155 \}
+\end{DoxyCode}
+
+
+\subsection{Documentação dos dados membro}
+\index{Livro@{Livro}!T\+AG@{T\+AG}}
+\index{T\+AG@{T\+AG}!Livro@{Livro}}
+\subsubsection[{\texorpdfstring{T\+AG}{TAG}}]{\setlength{\rightskip}{0pt plus 5cm}string Livro\+::\+T\+AG = titulo}\hypertarget{class_livro_aaa48373327454aabb96ba8d7f5835963}{}\label{class_livro_aaa48373327454aabb96ba8d7f5835963}
+
+
+Marcar os objetos com um unico identificador, tornando assim uma busca generia em todos os tipos de objeto. 
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{livro_8h}{livro.\+h}\item 
+src/\hyperlink{livro_8cpp}{livro.\+cpp}\end{DoxyCompactItemize}

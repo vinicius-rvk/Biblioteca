@@ -1,0 +1,80 @@
+\hypertarget{teste_8cpp}{}\section{Referência ao ficheiro src/teste.cpp}
+\label{teste_8cpp}\index{src/teste.\+cpp@{src/teste.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{teste_8cpp_a07b4872b0d9ad7912f7eef4655c47c17}{check\+\_\+atrasado} (int dia, int mes, int ano)
+\item 
+int \hyperlink{teste_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\index{teste.\+cpp@{teste.\+cpp}!check\+\_\+atrasado@{check\+\_\+atrasado}}
+\index{check\+\_\+atrasado@{check\+\_\+atrasado}!teste.\+cpp@{teste.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+\_\+atrasado(int dia, int mes, int ano)}{check_atrasado(int dia, int mes, int ano)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+\_\+atrasado (
+\begin{DoxyParamCaption}
+\item[{int}]{dia, }
+\item[{int}]{mes, }
+\item[{int}]{ano}
+\end{DoxyParamCaption}
+)}\hypertarget{teste_8cpp_a07b4872b0d9ad7912f7eef4655c47c17}{}\label{teste_8cpp_a07b4872b0d9ad7912f7eef4655c47c17}
+
+\begin{DoxyCode}
+7                                               \{
+8     time\_t agora;
+9     \textcolor{keyword}{struct }tm * agora\_struct;
+10 
+11     agora = time(NULL);
+12     agora\_struct = localtime(&agora);
+13     agora\_struct->tm\_year += (2017-agora\_struct->tm\_year);
+14 
+15     \textcolor{keywordflow}{if} (ano < agora\_struct->tm\_year) \{
+16         cout << \textcolor{stringliteral}{"O livro está atrasado."} << endl;
+17         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+18     \}
+19 
+20     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mes < agora\_struct->tm\_mon) \{
+21         cout << \textcolor{stringliteral}{"O livro está atrasado."} << endl;
+22         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+23     \}
+24 
+25     \textcolor{keywordflow}{if} (dia < agora\_struct->tm\_mday ) \{
+26         cout << \textcolor{stringliteral}{"O livro está atrasado."} << endl;
+27         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+28     \}
+29 
+30     cout << \textcolor{stringliteral}{"O livro está dentro do prazo."} << endl;
+31 
+32 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+33 
+34 \}
+\end{DoxyCode}
+\index{teste.\+cpp@{teste.\+cpp}!main@{main}}
+\index{main@{main}!teste.\+cpp@{teste.\+cpp}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{teste_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{}\label{teste_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCode}
+106               \{
+107     
+108     \textcolor{keywordtype}{int} dia, mes, ano;
+109         cin >> dia;
+110         cin >> mes; 
+111         cin >> ano;
+112 
+113     \textcolor{keywordflow}{if}(\hyperlink{teste_8cpp_a07b4872b0d9ad7912f7eef4655c47c17}{check\_atrasado}(dia, mes, ano))\{
+114         cout << \textcolor{stringliteral}{"Esta atrasado!"} << endl;
+115     \}
+116 
+117 
+118 
+119     \textcolor{keywordflow}{return} 0;
+120 \}
+\end{DoxyCode}

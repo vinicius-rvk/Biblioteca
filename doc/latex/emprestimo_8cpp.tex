@@ -1,0 +1,44 @@
+\hypertarget{emprestimo_8cpp}{}\section{Referência ao ficheiro src/emprestimo.cpp}
+\label{emprestimo_8cpp}\index{src/emprestimo.\+cpp@{src/emprestimo.\+cpp}}
+{\ttfamily \#include \char`\"{}emprestimo.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{emprestimo_8cpp_a85b9e35426dc368ef6a67d1ad842774f}{operator$<$$<$} (ostream \&o, \hyperlink{class_emprestimo}{Emprestimo} \&emprestimo)
+\begin{DoxyCompactList}\small\item\em Sobecarga do operador $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\index{emprestimo.\+cpp@{emprestimo.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!emprestimo.\+cpp@{emprestimo.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&o, Emprestimo \&emprestimo)}{operator<<(ostream &o, Emprestimo &emprestimo)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Emprestimo} \&}]{emprestimo}
+\end{DoxyParamCaption}
+)}\hypertarget{emprestimo_8cpp_a85b9e35426dc368ef6a67d1ad842774f}{}\label{emprestimo_8cpp_a85b9e35426dc368ef6a67d1ad842774f}
+
+
+Sobecarga do operador $>$$>$ 
+
+função sobrecarregada para imprimir o objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&emprestimo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+125                                                        \{
+126     o << \textcolor{stringliteral}{"USUARIO: "} << endl << *emprestimo.\hyperlink{class_emprestimo_ad049b5c858bf11c26df0417faf4d0a0a}{getUsuario}() << endl;
+127     o << \textcolor{stringliteral}{"LIVRO: "} << endl << *emprestimo.\hyperlink{class_emprestimo_ae38842ee822774d87f2ec4eeff34013c}{getLivro}() << endl;
+128 
+129     \textcolor{keywordflow}{return} o;
+130 \}
+\end{DoxyCode}

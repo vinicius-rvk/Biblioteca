@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Documentação Laboratorio 3: Código-Fonte de src/emprestimo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentação Laboratorio 3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Ficheiros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">emprestimo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="emprestimo_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef _EMPRESTIMO_H_ // Uso do pré-processador</span></div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="emprestimo_8h.html#a7d2e47bcba12ed8a91f11dbe8bf6367a">    7</a></span>&#160;<span class="preprocessor">#define _EMPRESTIMO_H_ // Definição do identificador do cabeçalho</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="livro_8h.html">livro.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usuario_8h.html">usuario.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structdata.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdata.html">data</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structdata.html#ad0f682acbc0199c05dc584f887f580a1">   22</a></span>&#160;    <span class="keywordtype">int</span> dia,</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="structdata.html#ad0f682acbc0199c05dc584f887f580a1">mes</a>,</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ano;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_emprestimo.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_emprestimo.html">Emprestimo</a> </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_livro.html">Livro</a>* livro; </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_usuario.html">Usuario</a>* usuario; </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="structdata.html">data</a> emprestimo; </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>* next; </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>* previous; </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>(<a class="code" href="class_usuario.html">Usuario</a>*, <a class="code" href="class_livro.html">Livro</a>*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>(<a class="code" href="class_usuario.html">Usuario</a>*, <a class="code" href="class_livro.html">Livro</a>*);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ~<a class="code" href="class_emprestimo.html">Emprestimo</a>();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// GETTERS</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>    <a class="code" href="class_livro.html">Livro</a>* getLivro(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_usuario.html">Usuario</a>* getUsuario(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>* getNext();</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_emprestimo.html">Emprestimo</a>* getPrevious();</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> getDia();</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> getMes();</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> getAno();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//SETTERS</span></div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> setLivro(<a class="code" href="class_livro.html">Livro</a>*);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> setUsuario(<a class="code" href="class_usuario.html">Usuario</a>*);</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> setNext(<a class="code" href="class_emprestimo.html">Emprestimo</a>* proximo);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> setPrevious(<a class="code" href="class_emprestimo.html">Emprestimo</a>* anterior);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="emprestimo_8cpp.html#a85b9e35426dc368ef6a67d1ad842774f">operator&lt;&lt;</a>(ostream&amp;, <a class="code" href="class_emprestimo.html">Emprestimo</a>&amp;);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif // fim da definição _EMPRESTIMO_H_</span></div><div class="ttc" id="structdata_html_ad0f682acbc0199c05dc584f887f580a1"><div class="ttname"><a href="structdata.html#ad0f682acbc0199c05dc584f887f580a1">data::mes</a></div><div class="ttdeci">int mes</div><div class="ttdef"><b>Definition:</b> emprestimo.h:22</div></div>
+<div class="ttc" id="usuario_8h_html"><div class="ttname"><a href="usuario_8h.html">usuario.h</a></div></div>
+<div class="ttc" id="class_emprestimo_html"><div class="ttname"><a href="class_emprestimo.html">Emprestimo</a></div><div class="ttdoc">Objeto com a finalidade de guardar um registro de emprestimo. </div><div class="ttdef"><b>Definition:</b> emprestimo.h:31</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="livro_8h_html"><div class="ttname"><a href="livro_8h.html">livro.h</a></div></div>
+<div class="ttc" id="class_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition:</b> usuario.h:19</div></div>
+<div class="ttc" id="class_livro_html"><div class="ttname"><a href="class_livro.html">Livro</a></div><div class="ttdoc">Classe com finalidade de registo de um Livro. </div><div class="ttdef"><b>Definition:</b> livro.h:20</div></div>
+<div class="ttc" id="structdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdoc">estrutura para guardar uma data </div><div class="ttdef"><b>Definition:</b> emprestimo.h:20</div></div>
+<div class="ttc" id="emprestimo_8cpp_html_a85b9e35426dc368ef6a67d1ad842774f"><div class="ttname"><a href="emprestimo_8cpp.html#a85b9e35426dc368ef6a67d1ad842774f">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;o, Emprestimo &amp;emprestimo)</div><div class="ttdoc">Sobecarga do operador &gt;&gt; </div><div class="ttdef"><b>Definition:</b> emprestimo.cpp:125</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

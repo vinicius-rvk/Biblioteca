@@ -1,0 +1,439 @@
+\hypertarget{class_usuario}{}\section{Referência à classe Usuario}
+\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+{\ttfamily \#include $<$usuario.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_usuario_ab7216c2b4c492cc70cd1e06c3f446e68}{Usuario} (vector$<$ string $>$ \&)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto a partir de um vector de string (tras consigo os parametros) Utilizado em leitura de banco de dados. \end{DoxyCompactList}\item 
+\hyperlink{class_usuario_aa85a5371a098dfba5449140d9b8a472f}{Usuario} ()
+\item 
+\hyperlink{class_usuario_a2e852e0e375bc99e6810fd1919353464}{Usuario} (string, string, string)
+\begin{DoxyCompactList}\small\item\em Construtor de um objeto a patir de strings como argumento. \end{DoxyCompactList}\item 
+string \hyperlink{class_usuario_a160dc8cfe61406cc2935d0e529d3ed07}{get\+Nome} (void)
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel nome de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+string \hyperlink{class_usuario_a645fe3fa619ca57849ef5ea442caeaf5}{get\+Endereco} (void)
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel endereco de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+string \hyperlink{class_usuario_a3869f68ef41f4574c86a286d6d482ad0}{get\+Identidade} (void)
+\begin{DoxyCompactList}\small\item\em Função para retornar a variavel identidade de um objeto \hyperlink{class_livro}{Livro}. \end{DoxyCompactList}\item 
+\hyperlink{class_usuario}{Usuario} $\ast$ \hyperlink{class_usuario_ab8d7a12c2a1467e0241914c0a15a458f}{get\+Next} ()
+\begin{DoxyCompactList}\small\item\em retorna um ponteiro do proximo objeto em uma lista encadeada \end{DoxyCompactList}\item 
+\hyperlink{class_usuario}{Usuario} $\ast$ \hyperlink{class_usuario_adabcb9ad2b3d4113a156bf2bb1ff34b2}{get\+Previous} ()
+\begin{DoxyCompactList}\small\item\em retorna um ponteiro do objeto anterior em uma lista encadeada \end{DoxyCompactList}\item 
+void \hyperlink{class_usuario_a0d002d4ceff9c827457269a24a3e6c24}{set\+Nome} (string)
+\begin{DoxyCompactList}\small\item\em Função para modificara a variavel nome do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_usuario_a751f967a6baa0f88104e85418a7ae2a6}{set\+Endereco} (string)
+\begin{DoxyCompactList}\small\item\em Função para modificara a variavel endereco do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_usuario_a4ab8089f937b58a05d14fa49d41b67e1}{set\+Identidade} (string)
+\begin{DoxyCompactList}\small\item\em Função para modificara a variavel identidade do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_usuario_a6ac654a85a5b9d0a45e008e9e5876298}{set\+Next} (\hyperlink{class_usuario}{Usuario} $\ast$proximo)
+\begin{DoxyCompactList}\small\item\em Função para modificar o ponteiro do proximo objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_usuario_af9048c1b41e3d75d9f3762cad60f4cd7}{set\+Previous} (\hyperlink{class_usuario}{Usuario} $\ast$anterior)
+\begin{DoxyCompactList}\small\item\em Função para modificar o ponteiro do objeto anterior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_usuario_afed04706ae19ad920ca9e0c4c90dfc37}{T\+AG} = nome
+\begin{DoxyCompactList}\small\item\em Marcar os objetos com um unico identificador, tornando assim uma busca generia em todos os tipos de objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_usuario_ab108af1e31af42704a4149fd396bd453}{operator$<$$<$} (ostream \&, \hyperlink{class_usuario}{Usuario} \&)
+\begin{DoxyCompactList}\small\item\em função sorecarregada para imprimir o este objeto \end{DoxyCompactList}\item 
+istream \& \hyperlink{class_usuario_a5d67373950f4c2739d0fd6dcea398d52}{operator$>$$>$} (istream \&, \hyperlink{class_usuario}{Usuario} \&)
+\begin{DoxyCompactList}\small\item\em função sorecarregada para receber o este objeto \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{Usuario(vector$<$ string $>$ \&)}{Usuario(vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}Usuario\+::\+Usuario (
+\begin{DoxyParamCaption}
+\item[{vector$<$ string $>$ \&}]{palavra}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_ab7216c2b4c492cc70cd1e06c3f446e68}{}\label{class_usuario_ab7216c2b4c492cc70cd1e06c3f446e68}
+
+
+Construtor de um objeto a partir de um vector de string (tras consigo os parametros) Utilizado em leitura de banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em palavra} & Um vector de string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+24                                        :
+25     nome(palavra[0]),
+26     endereco(palavra[1]),
+27     identidade(palavra[2]),
+28     next(NULL),
+29     previous(NULL)
+30     \{\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{Usuario()}{Usuario()}}]{\setlength{\rightskip}{0pt plus 5cm}Usuario\+::\+Usuario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_aa85a5371a098dfba5449140d9b8a472f}{}\label{class_usuario_aa85a5371a098dfba5449140d9b8a472f}
+Costrutor de um objeto vazio 
+\begin{DoxyCode}
+12                 :
+13     nome(\textcolor{stringliteral}{""}),
+14     endereco(\textcolor{stringliteral}{""}),
+15     identidade(\textcolor{stringliteral}{""}),
+16     next(NULL),
+17     previous(NULL)
+18     \{\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{Usuario(string, string, string)}{Usuario(string, string, string)}}]{\setlength{\rightskip}{0pt plus 5cm}Usuario\+::\+Usuario (
+\begin{DoxyParamCaption}
+\item[{string}]{nome, }
+\item[{string}]{endereco, }
+\item[{string}]{identidade}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a2e852e0e375bc99e6810fd1919353464}{}\label{class_usuario_a2e852e0e375bc99e6810fd1919353464}
+
+
+Construtor de um objeto a patir de strings como argumento. 
+
+Costrutor de um objeto completo (utilizado para cadastrar um novo usuario).
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome do usuario \\
+\hline
+{\em endeeco} & Endeeço do usuario$\ast$ \\
+\hline
+{\em identidade} & Identidade do usuario \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+37                                                                :
+38     nome(nome),
+39     endereco(endereco),
+40     identidade(identidade),
+41     next(NULL),
+42     previous(NULL)
+43     \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentação dos métodos}
+\index{Usuario@{Usuario}!get\+Endereco@{get\+Endereco}}
+\index{get\+Endereco@{get\+Endereco}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{get\+Endereco(void)}{getEndereco(void)}}]{\setlength{\rightskip}{0pt plus 5cm}string Usuario\+::get\+Endereco (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a645fe3fa619ca57849ef5ea442caeaf5}{}\label{class_usuario_a645fe3fa619ca57849ef5ea442caeaf5}
+
+
+Função para retornar a variavel endereco de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel endereço do usuario.
+
+\begin{DoxyReturn}{Retorna}
+edereco
+
+endereco 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+56 \{ \textcolor{keywordflow}{return} this->endereco;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!get\+Identidade@{get\+Identidade}}
+\index{get\+Identidade@{get\+Identidade}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{get\+Identidade(void)}{getIdentidade(void)}}]{\setlength{\rightskip}{0pt plus 5cm}string Usuario\+::get\+Identidade (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a3869f68ef41f4574c86a286d6d482ad0}{}\label{class_usuario_a3869f68ef41f4574c86a286d6d482ad0}
+
+
+Função para retornar a variavel identidade de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel identidade do usuario.
+
+\begin{DoxyReturn}{Retorna}
+identidade 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+61 \{ \textcolor{keywordflow}{return} this->identidade;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{get\+Next()}{getNext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Usuario} $\ast$ Usuario\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_ab8d7a12c2a1467e0241914c0a15a458f}{}\label{class_usuario_ab8d7a12c2a1467e0241914c0a15a458f}
+
+
+retorna um ponteiro do proximo objeto em uma lista encadeada 
+
+Fução para retornar o ponteiro da variavel next do usuario.
+
+\begin{DoxyReturn}{Retorna}
+next 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+66 \{\textcolor{keywordflow}{return} this->next;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{get\+Nome(void)}{getNome(void)}}]{\setlength{\rightskip}{0pt plus 5cm}string Usuario\+::get\+Nome (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a160dc8cfe61406cc2935d0e529d3ed07}{}\label{class_usuario_a160dc8cfe61406cc2935d0e529d3ed07}
+
+
+Função para retornar a variavel nome de um objeto \hyperlink{class_livro}{Livro}. 
+
+Fução para retornar a variavel nome do usuario.
+
+\begin{DoxyReturn}{Retorna}
+nome 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50 \{ \textcolor{keywordflow}{return} this->nome;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!get\+Previous@{get\+Previous}}
+\index{get\+Previous@{get\+Previous}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{get\+Previous()}{getPrevious()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Usuario} $\ast$ Usuario\+::get\+Previous (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_adabcb9ad2b3d4113a156bf2bb1ff34b2}{}\label{class_usuario_adabcb9ad2b3d4113a156bf2bb1ff34b2}
+
+
+retorna um ponteiro do objeto anterior em uma lista encadeada 
+
+Fução para retornar o ponteiro da variavel previous do usuario.
+
+\begin{DoxyReturn}{Retorna}
+previous 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+71 \{\textcolor{keywordflow}{return} this->previous;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!set\+Endereco@{set\+Endereco}}
+\index{set\+Endereco@{set\+Endereco}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{set\+Endereco(string)}{setEndereco(string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Usuario\+::set\+Endereco (
+\begin{DoxyParamCaption}
+\item[{string}]{endereco}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a751f967a6baa0f88104e85418a7ae2a6}{}\label{class_usuario_a751f967a6baa0f88104e85418a7ae2a6}
+
+
+Função para modificara a variavel endereco do objeto. 
+
+Função para modificar a variavel endereço do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em endereco} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+84 \{this->endereco = endereco;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!set\+Identidade@{set\+Identidade}}
+\index{set\+Identidade@{set\+Identidade}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{set\+Identidade(string)}{setIdentidade(string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Usuario\+::set\+Identidade (
+\begin{DoxyParamCaption}
+\item[{string}]{identidade}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a4ab8089f937b58a05d14fa49d41b67e1}{}\label{class_usuario_a4ab8089f937b58a05d14fa49d41b67e1}
+
+
+Função para modificara a variavel identidade do objeto. 
+
+Função para modificar a variavel identidade do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em idenidade} & \\
+\hline
+{\em identidade} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+89 \{this->identidade = identidade;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{set\+Next(\+Usuario $\ast$proximo)}{setNext(Usuario *proximo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Usuario\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Usuario} $\ast$}]{proximo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a6ac654a85a5b9d0a45e008e9e5876298}{}\label{class_usuario_a6ac654a85a5b9d0a45e008e9e5876298}
+
+
+Função para modificar o ponteiro do proximo objeto. 
+
+Função para modificar o ponteiro da variavel next do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$proximo} & \\
+\hline
+{\em next} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+94 \{this->next = proximo;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!set\+Nome@{set\+Nome}}
+\index{set\+Nome@{set\+Nome}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{set\+Nome(string)}{setNome(string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Usuario\+::set\+Nome (
+\begin{DoxyParamCaption}
+\item[{string}]{nome}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_a0d002d4ceff9c827457269a24a3e6c24}{}\label{class_usuario_a0d002d4ceff9c827457269a24a3e6c24}
+
+
+Função para modificara a variavel nome do objeto. 
+
+Função para modificar a variavel nome do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+79 \{this->nome = nome;\}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!set\+Previous@{set\+Previous}}
+\index{set\+Previous@{set\+Previous}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{set\+Previous(\+Usuario $\ast$anterior)}{setPrevious(Usuario *anterior)}}]{\setlength{\rightskip}{0pt plus 5cm}void Usuario\+::set\+Previous (
+\begin{DoxyParamCaption}
+\item[{{\bf Usuario} $\ast$}]{anterior}
+\end{DoxyParamCaption}
+)}\hypertarget{class_usuario_af9048c1b41e3d75d9f3762cad60f4cd7}{}\label{class_usuario_af9048c1b41e3d75d9f3762cad60f4cd7}
+
+
+Função para modificar o ponteiro do objeto anterior. 
+
+Função para modificar o ponteiro da variavel previous do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em $\ast$anteior} & \\
+\hline
+{\em previous} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+99 \{this->previous = anterior;\}
+\end{DoxyCode}
+
+
+\subsection{Documentação das classes amigas e funções relacionadas}
+\index{Usuario@{Usuario}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Usuario} \&}]{usuario}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_usuario_ab108af1e31af42704a4149fd396bd453}{}\label{class_usuario_ab108af1e31af42704a4149fd396bd453}
+
+
+função sorecarregada para imprimir o este objeto 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+108                                                  \{
+109     o << usuario.\hyperlink{class_usuario_a160dc8cfe61406cc2935d0e529d3ed07}{getNome}() << endl;
+110     o << usuario.\hyperlink{class_usuario_a645fe3fa619ca57849ef5ea442caeaf5}{getEndereco}() << endl;
+111     o << usuario.\hyperlink{class_usuario_a3869f68ef41f4574c86a286d6d482ad0}{getIdentidade}() << endl;
+112     \textcolor{keywordflow}{return} o;
+113 \}
+\end{DoxyCode}
+\index{Usuario@{Usuario}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Usuario} \&}]{usuario}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_usuario_a5d67373950f4c2739d0fd6dcea398d52}{}\label{class_usuario_a5d67373950f4c2739d0fd6dcea398d52}
+
+
+função sorecarregada para receber o este objeto 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&in} & \\
+\hline
+{\em \&usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+in 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+120                                                   \{
+121     \textcolor{keywordtype}{string} xnome, xendereco, xidentidade;
+122     cout << \textcolor{stringliteral}{"Nome: "};
+123     in >> xnome;
+124     cout << \textcolor{stringliteral}{"Endereço: "};
+125     in >> xendereco;
+126     cout << \textcolor{stringliteral}{"Identidade"};
+127     in >> xidentidade;
+128 
+129     usuario.\hyperlink{class_usuario_a0d002d4ceff9c827457269a24a3e6c24}{setNome}(xnome);
+130     usuario.\hyperlink{class_usuario_a751f967a6baa0f88104e85418a7ae2a6}{setEndereco}(xendereco);
+131     usuario.\hyperlink{class_usuario_a4ab8089f937b58a05d14fa49d41b67e1}{setIdentidade}(xidentidade);
+132     usuario.\hyperlink{class_usuario_afed04706ae19ad920ca9e0c4c90dfc37}{TAG} = xnome;
+133 
+134 
+135     \textcolor{keywordflow}{return} in;
+136 \}\end{DoxyCode}
+
+
+\subsection{Documentação dos dados membro}
+\index{Usuario@{Usuario}!T\+AG@{T\+AG}}
+\index{T\+AG@{T\+AG}!Usuario@{Usuario}}
+\subsubsection[{\texorpdfstring{T\+AG}{TAG}}]{\setlength{\rightskip}{0pt plus 5cm}string Usuario\+::\+T\+AG = nome}\hypertarget{class_usuario_afed04706ae19ad920ca9e0c4c90dfc37}{}\label{class_usuario_afed04706ae19ad920ca9e0c4c90dfc37}
+
+
+Marcar os objetos com um unico identificador, tornando assim uma busca generia em todos os tipos de objeto. 
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{usuario_8h}{usuario.\+h}\item 
+src/\hyperlink{usuario_8cpp}{usuario.\+cpp}\end{DoxyCompactItemize}

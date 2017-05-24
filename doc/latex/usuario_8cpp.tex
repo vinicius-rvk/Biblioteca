@@ -1,0 +1,89 @@
+\hypertarget{usuario_8cpp}{}\section{Referência ao ficheiro src/usuario.cpp}
+\label{usuario_8cpp}\index{src/usuario.\+cpp@{src/usuario.\+cpp}}
+{\ttfamily \#include \char`\"{}usuario.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{usuario_8cpp_a4aa2b54250cbe52fa1dbc4ffba14e37e}{operator$<$$<$} (ostream \&o, \hyperlink{class_usuario}{Usuario} \&usuario)
+\begin{DoxyCompactList}\small\item\em Sobecarga do operador $>$$>$ \end{DoxyCompactList}\item 
+istream \& \hyperlink{usuario_8cpp_a6a09ac420301e6903e738b56311a47d9}{operator$>$$>$} (istream \&in, \hyperlink{class_usuario}{Usuario} \&usuario)
+\begin{DoxyCompactList}\small\item\em Sobecarga do operador $<$$<$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\index{usuario.\+cpp@{usuario.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!usuario.\+cpp@{usuario.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&o, Usuario \&usuario)}{operator<<(ostream &o, Usuario &usuario)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Usuario} \&}]{usuario}
+\end{DoxyParamCaption}
+)}\hypertarget{usuario_8cpp_a4aa2b54250cbe52fa1dbc4ffba14e37e}{}\label{usuario_8cpp_a4aa2b54250cbe52fa1dbc4ffba14e37e}
+
+
+Sobecarga do operador $>$$>$ 
+
+função sorecarregada para imprimir o este objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+108                                                  \{
+109     o << usuario.\hyperlink{class_usuario_a160dc8cfe61406cc2935d0e529d3ed07}{getNome}() << endl;
+110     o << usuario.\hyperlink{class_usuario_a645fe3fa619ca57849ef5ea442caeaf5}{getEndereco}() << endl;
+111     o << usuario.\hyperlink{class_usuario_a3869f68ef41f4574c86a286d6d482ad0}{getIdentidade}() << endl;
+112     \textcolor{keywordflow}{return} o;
+113 \}
+\end{DoxyCode}
+\index{usuario.\+cpp@{usuario.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!usuario.\+cpp@{usuario.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&in, Usuario \&usuario)}{operator>>(istream &in, Usuario &usuario)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Usuario} \&}]{usuario}
+\end{DoxyParamCaption}
+)}\hypertarget{usuario_8cpp_a6a09ac420301e6903e738b56311a47d9}{}\label{usuario_8cpp_a6a09ac420301e6903e738b56311a47d9}
+
+
+Sobecarga do operador $<$$<$. 
+
+função sorecarregada para receber o este objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&in} & \\
+\hline
+{\em \&usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+in 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+120                                                   \{
+121     \textcolor{keywordtype}{string} xnome, xendereco, xidentidade;
+122     cout << \textcolor{stringliteral}{"Nome: "};
+123     in >> xnome;
+124     cout << \textcolor{stringliteral}{"Endereço: "};
+125     in >> xendereco;
+126     cout << \textcolor{stringliteral}{"Identidade"};
+127     in >> xidentidade;
+128 
+129     usuario.\hyperlink{class_usuario_a0d002d4ceff9c827457269a24a3e6c24}{setNome}(xnome);
+130     usuario.\hyperlink{class_usuario_a751f967a6baa0f88104e85418a7ae2a6}{setEndereco}(xendereco);
+131     usuario.\hyperlink{class_usuario_a4ab8089f937b58a05d14fa49d41b67e1}{setIdentidade}(xidentidade);
+132     usuario.\hyperlink{class_usuario_afed04706ae19ad920ca9e0c4c90dfc37}{TAG} = xnome;
+133 
+134 
+135     \textcolor{keywordflow}{return} in;
+136 \}\end{DoxyCode}

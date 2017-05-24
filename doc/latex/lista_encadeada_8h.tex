@@ -1,0 +1,115 @@
+\hypertarget{lista_encadeada_8h}{}\section{Referência ao ficheiro src/lista\+Encadeada.h}
+\label{lista_encadeada_8h}\index{src/lista\+Encadeada.\+h@{src/lista\+Encadeada.\+h}}
+{\ttfamily \#include \char`\"{}emprestimo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usuario.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}livro.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_lista}{Lista$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em objeto generico com a finalidade de criar e manipular lista de qualquer objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lista_encadeada_8h_a799a9cf53370f775ad1220986a477147}{\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{lista_encadeada_8h_a07b4872b0d9ad7912f7eef4655c47c17}{check\+\_\+atrasado} (int dia, int mes, int ano)
+\begin{DoxyCompactList}\small\item\em função auxiliar para coparar data passada com data atual  dia  mes  ano  true/false \end{DoxyCompactList}\item 
+void \hyperlink{lista_encadeada_8h_a23ed76470c3375dd5a2c644217911915}{tratar\+\_\+texto} (string in, vector$<$ string $>$ \&palavras)
+\begin{DoxyCompactList}\small\item\em Fução de separar palavras de uma frase em varias strings  in string contendo a frase a ser tratada  \&palavras Vrctor de string para guardar as palavras separadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+\begin{DoxyAuthor}{Autor}
+Roberto Vinicius Kuo \href{mailto:viniciusrvk@gmail.com}{\tt viniciusrvk@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Documentação das macros}
+\index{lista\+Encadeada.\+h@{lista\+Encadeada.\+h}!\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+@{\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+@{\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+}!lista\+Encadeada.\+h@{lista\+Encadeada.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+}{_LISTA_H_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+L\+I\+S\+T\+A\+\_\+\+H\+\_\+}\hypertarget{lista_encadeada_8h_a799a9cf53370f775ad1220986a477147}{}\label{lista_encadeada_8h_a799a9cf53370f775ad1220986a477147}
+
+
+\subsection{Documentação das funções}
+\index{lista\+Encadeada.\+h@{lista\+Encadeada.\+h}!check\+\_\+atrasado@{check\+\_\+atrasado}}
+\index{check\+\_\+atrasado@{check\+\_\+atrasado}!lista\+Encadeada.\+h@{lista\+Encadeada.\+h}}
+\subsubsection[{\texorpdfstring{check\+\_\+atrasado(int dia, int mes, int ano)}{check_atrasado(int dia, int mes, int ano)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+\_\+atrasado (
+\begin{DoxyParamCaption}
+\item[{int}]{dia, }
+\item[{int}]{mes, }
+\item[{int}]{ano}
+\end{DoxyParamCaption}
+)}\hypertarget{lista_encadeada_8h_a07b4872b0d9ad7912f7eef4655c47c17}{}\label{lista_encadeada_8h_a07b4872b0d9ad7912f7eef4655c47c17}
+
+
+função auxiliar para coparar data passada com data atual  dia  mes  ano  true/false 
+
+
+\begin{DoxyCode}
+23                                               \{
+24     time\_t agora; \textcolor{comment}{// variael para pegar o tempo de maquina atual}
+25     \textcolor{keyword}{struct }tm * agora\_struct; \textcolor{comment}{// cria um ponteiro de struct de data}
+26 
+27     agora = time(NULL); \textcolor{comment}{// função para pegar o tempo atual}
+28     agora\_struct = localtime(&agora); \textcolor{comment}{// modificar o tempo para moso GTM -3}
+29     agora\_struct->tm\_year += (2017-agora\_struct->tm\_year); \textcolor{comment}{// Modifica a referencia do ao de 117 para 2017}
+30 
+31     \textcolor{keywordflow}{if} (ano < agora\_struct->tm\_year) \{ \textcolor{comment}{//faz comparação do dia e retorna true para atrasado}
+32         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+33     \}
+34 
+35     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mes < agora\_struct->tm\_mon) \{ \textcolor{comment}{//faz comparação do mes e retorna true para atrasado}
+36         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+37     \}
+38 
+39     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dia < agora\_struct->tm\_mday ) \{ \textcolor{comment}{//faz comparação do ano e retorna true para atrasado}
+40         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+41     \}\textcolor{keywordflow}{else}\{
+42         \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// retorna falso para nao atrasado}
+43     \}
+44 \}
+\end{DoxyCode}
+\index{lista\+Encadeada.\+h@{lista\+Encadeada.\+h}!tratar\+\_\+texto@{tratar\+\_\+texto}}
+\index{tratar\+\_\+texto@{tratar\+\_\+texto}!lista\+Encadeada.\+h@{lista\+Encadeada.\+h}}
+\subsubsection[{\texorpdfstring{tratar\+\_\+texto(string in, vector$<$ string $>$ \&palavras)}{tratar_texto(string in, vector< string > &palavras)}}]{\setlength{\rightskip}{0pt plus 5cm}void tratar\+\_\+texto (
+\begin{DoxyParamCaption}
+\item[{string}]{in, }
+\item[{vector$<$ string $>$ \&}]{palavras}
+\end{DoxyParamCaption}
+)}\hypertarget{lista_encadeada_8h_a23ed76470c3375dd5a2c644217911915}{}\label{lista_encadeada_8h_a23ed76470c3375dd5a2c644217911915}
+
+
+Fução de separar palavras de uma frase em varias strings  in string contendo a frase a ser tratada  \&palavras Vrctor de string para guardar as palavras separadas. 
+
+
+\begin{DoxyCode}
+50                                                       \{
+51 
+52     \textcolor{keywordtype}{int} i =0, j = 0;
+53     \textcolor{keywordtype}{string} guarda;
+54 
+55     \textcolor{keywordflow}{do}\{ 
+56         \textcolor{keywordflow}{if}(in[i] == \textcolor{charliteral}{';'})\{
+57             \textcolor{comment}{//guarda += '\(\backslash\)0';}
+58             palavras.push\_back(guarda);
+59             guarda = \textcolor{stringliteral}{""};
+60             j++;
+61         \}\textcolor{keywordflow}{else}\{
+62             guarda += in[i];
+63             
+64         \}
+65         j++;
+66         i++;
+67 
+68         
+69     \}\textcolor{keywordflow}{while}(in[i] != \textcolor{charliteral}{'\(\backslash\)0'});
+70 
+71     palavras.push\_back(guarda);
+72 \}
+\end{DoxyCode}

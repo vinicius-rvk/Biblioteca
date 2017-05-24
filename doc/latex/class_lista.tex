@@ -1,0 +1,405 @@
+\hypertarget{class_lista}{}\section{Referência à classe Template Lista$<$ T $>$}
+\label{class_lista}\index{Lista$<$ T $>$@{Lista$<$ T $>$}}
+
+
+objeto generico com a finalidade de criar e manipular lista de qualquer objeto.  
+
+
+
+
+{\ttfamily \#include $<$lista\+Encadeada.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lista_adce924e21607848663132290be1a959d}{Lista} ()
+\begin{DoxyCompactList}\small\item\em Costructor de uma lista de objeto generico. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_lista_afa9f5ea1b06315bb169fb408423e4518}{get\+First} ()
+\begin{DoxyCompactList}\small\item\em Retorna um ponteiro do objeto limitador inicial. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_lista_a13bf54ce03e9e8b03f372a65dc309d9e}{get\+End} ()
+\begin{DoxyCompactList}\small\item\em Retorna um ponteiro do objeto limitador final. \end{DoxyCompactList}\item 
+int \hyperlink{class_lista_a8d4437d6cb6d0e1a92fc47ee05a35910}{get\+Quantidade} ()
+\begin{DoxyCompactList}\small\item\em Retorna a variavel quantidade do objeto. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a3d52d4f2e1199eef12dd28450d889b68}{listar} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_lista}{Lista} todos os objetos da lista. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_ad28575300ce0ead7f45750986e9d66ed}{inserir} (T $\ast$)
+\begin{DoxyCompactList}\small\item\em Iseri objeto generico no final da lista. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar} (string)
+\begin{DoxyCompactList}\small\item\em Busca um objeto na lista. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a7ff5378a21816a595bdf4fd164c9a53b}{remover} (string)
+\begin{DoxyCompactList}\small\item\em Remove objeto da lista buscando por string. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_ae3773452776dd52eb86684969cbf5a79}{ler\+\_\+banco} (string)
+\begin{DoxyCompactList}\small\item\em Recebe o nome do arquivo como string e faz leiura e estanciamento dos objetos. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a5e8e038019f627e14b99fa0cc52618fc}{ler\+\_\+emprestimo} (string, \hyperlink{class_lista}{Lista}$<$ \hyperlink{class_usuario}{Usuario} $>$ $\ast$, \hyperlink{class_lista}{Lista}$<$ \hyperlink{class_livro}{Livro} $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em Tratamento de exeção para a classe \hyperlink{class_emprestimo}{Emprestimo}. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_acf387f2919c79e5ed8f8c17ab657f1a1}{atrasados} ()
+\begin{DoxyCompactList}\small\item\em Função especifica para classe Emprestimos; Imprime todos os atrasados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\\*
+class Lista$<$ T $>$}
+
+objeto generico com a finalidade de criar e manipular lista de qualquer objeto. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{Lista()}{Lista()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Lista}$<$ T $>$\+::{\bf Lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_adce924e21607848663132290be1a959d}{}\label{class_lista_adce924e21607848663132290be1a959d}
+
+
+Costructor de uma lista de objeto generico. 
+
+Cria uma lista de objeto generico. 
+\begin{DoxyCode}
+148                \{
+149     this->first = \textcolor{keyword}{new} T();
+150     this->end = \textcolor{keyword}{new} T();
+151 
+152     first->setNext(end);
+153     first->setPrevious(NULL);
+154 
+155     end->setNext(NULL);
+156     end->setPrevious(first);
+157 
+158     quantidade = 0;
+159 
+160 \}
+\end{DoxyCode}
+
+
+\subsection{Documentação dos métodos}
+\index{Lista@{Lista}!atrasados@{atrasados}}
+\index{atrasados@{atrasados}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{atrasados()}{atrasados()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::atrasados (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_acf387f2919c79e5ed8f8c17ab657f1a1}{}\label{class_lista_acf387f2919c79e5ed8f8c17ab657f1a1}
+
+
+Função especifica para classe Emprestimos; Imprime todos os atrasados. 
+
+Função especifica para Emprestimos; \hyperlink{class_lista}{Lista} todos os emprestimos atrasados. 
+\begin{DoxyCode}
+317                         \{
+318 
+319     T* curr = first->getNext();
+320 
+321     \textcolor{keywordflow}{while}(curr != end)\{
+322         \textcolor{keywordflow}{if}(\hyperlink{lista_encadeada_8h_a07b4872b0d9ad7912f7eef4655c47c17}{check\_atrasado}(curr->getDia(), curr->getMes(), curr->getAno()))\{
+323             \textcolor{keywordtype}{char} barra = \textcolor{charliteral}{'/'};
+324             cout << \textcolor{stringliteral}{"Usuario: "} << curr->getUsuario()->getNome() << endl
+325                  << \textcolor{stringliteral}{"Livro: "} << curr->getLivro()->getTitulo() << endl
+326                  << \textcolor{stringliteral}{"Devolução atrasada desde "} 
+327                  << curr->getDia()<< barra
+328                  << curr->getMes()<< barra
+329                  << curr->getAno()<< endl << endl;
+330         \}
+331         curr = curr->getNext();
+332     \}
+333 
+334 
+335 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!buscar@{buscar}}
+\index{buscar@{buscar}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{buscar(string)}{buscar(string)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Lista}$<$ T $>$\+::buscar (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{}\label{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}
+
+
+Busca um objeto na lista. 
+
+Busca e retorna objeto generico.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & Recebe uma string para a busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+curr Retorna objeto encontrado
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em String} & para comparar os nomes dos objetos genericos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+curr Retora o objeto encontrado 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+216                            \{
+217     T* curr = first->getNext();
+218 
+219     \textcolor{keywordflow}{while}(curr->TAG != s && curr != end)\{
+220         curr = curr->getNext();
+221     \}
+222     \textcolor{keywordflow}{if} (curr == end)
+223     \{
+224         \textcolor{keywordflow}{return} NULL;
+225     \}
+226 
+227 
+228 
+229     \textcolor{keywordflow}{return} curr; \textcolor{comment}{// retornar T}
+230 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{get\+End()}{getEnd()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Lista}$<$ T $>$\+::get\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a13bf54ce03e9e8b03f372a65dc309d9e}{}\label{class_lista_a13bf54ce03e9e8b03f372a65dc309d9e}
+
+
+Retorna um ponteiro do objeto limitador final. 
+
+retorna um ponteiro do objeto limitador final 
+\begin{DoxyCode}
+171 \{ \textcolor{keywordflow}{return} end;\}
+\end{DoxyCode}
+\index{Lista@{Lista}!get\+First@{get\+First}}
+\index{get\+First@{get\+First}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{get\+First()}{getFirst()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Lista}$<$ T $>$\+::get\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_afa9f5ea1b06315bb169fb408423e4518}{}\label{class_lista_afa9f5ea1b06315bb169fb408423e4518}
+
+
+Retorna um ponteiro do objeto limitador inicial. 
+
+retorna um ponteiro do objeto limitador inicial 
+\begin{DoxyCode}
+166 \{ \textcolor{keywordflow}{return} first;\}
+\end{DoxyCode}
+\index{Lista@{Lista}!get\+Quantidade@{get\+Quantidade}}
+\index{get\+Quantidade@{get\+Quantidade}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{get\+Quantidade()}{getQuantidade()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Lista}$<$ T $>$\+::get\+Quantidade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a8d4437d6cb6d0e1a92fc47ee05a35910}{}\label{class_lista_a8d4437d6cb6d0e1a92fc47ee05a35910}
+
+
+Retorna a variavel quantidade do objeto. 
+
+retorna a variavel quantidade 
+\begin{DoxyCode}
+176 \{ \textcolor{keywordflow}{return} this->quantidade;\}
+\end{DoxyCode}
+\index{Lista@{Lista}!inserir@{inserir}}
+\index{inserir@{inserir}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{inserir(\+T $\ast$)}{inserir(T *)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::inserir (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{novo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_ad28575300ce0ead7f45750986e9d66ed}{}\label{class_lista_ad28575300ce0ead7f45750986e9d66ed}
+
+
+Iseri objeto generico no final da lista. 
+
+Inseri objeto generico no final da lista.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em T$\ast$} & Generico\\
+\hline
+{\em $\ast$novo} & Ponteiro para um objeto generico \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+199                              \{ 
+200 
+201     novo->setNext(this->end);   
+202     novo->setPrevious(this->end->getPrevious());    
+203     
+204     novo->getNext()->setPrevious(novo);     
+205     novo->getPrevious()->setNext(novo);     
+206     
+207     this->quantidade++;
+208 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!ler\+\_\+banco@{ler\+\_\+banco}}
+\index{ler\+\_\+banco@{ler\+\_\+banco}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{ler\+\_\+banco(string)}{ler_banco(string)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::ler\+\_\+banco (
+\begin{DoxyParamCaption}
+\item[{string}]{arq}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_ae3773452776dd52eb86684969cbf5a79}{}\label{class_lista_ae3773452776dd52eb86684969cbf5a79}
+
+
+Recebe o nome do arquivo como string e faz leiura e estanciamento dos objetos. 
+
+Recebe o nome do arquivo e faz a leitura criando objetos genericos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & \\
+\hline
+{\em arq} & Nome do arquivo a ser lido \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+255                                   \{
+256     
+257     fstream arquivo(arq);
+258     \textcolor{keywordtype}{string} linha;
+259 
+260     \textcolor{keywordflow}{if}(arquivo.is\_open())\{
+261         \textcolor{keywordflow}{while}(getline(arquivo, linha))\{
+262             vector<string> palavras; \textcolor{comment}{//cria um vector temporario para armazenar a linha tratada}
+263 
+264             \hyperlink{lista_encadeada_8h_a23ed76470c3375dd5a2c644217911915}{tratar\_texto}(linha, palavras);  \textcolor{comment}{// trata a linha do banco de dados}
+265             
+266             T* novo\_node = \textcolor{keyword}{new} T(palavras); \textcolor{comment}{//Cria novo objeto}
+267             
+268             palavras.erase(palavras.begin(), palavras.end()); \textcolor{comment}{// limpa o vector}
+269             \hyperlink{class_lista_ad28575300ce0ead7f45750986e9d66ed}{inserir}(novo\_node);
+270         \}
+271 
+272         arquivo.close();
+273 
+274     \}
+275     \textcolor{keywordflow}{else}\{
+276         cout << \textcolor{stringliteral}{"ARQUIVO NAO ABRIU!"} << endl;
+277     \}
+278 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!ler\+\_\+emprestimo@{ler\+\_\+emprestimo}}
+\index{ler\+\_\+emprestimo@{ler\+\_\+emprestimo}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{ler\+\_\+emprestimo(string, Lista$<$ Usuario $>$ $\ast$, Lista$<$ Livro $>$ $\ast$)}{ler_emprestimo(string, Lista< Usuario > *, Lista< Livro > *)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::ler\+\_\+emprestimo (
+\begin{DoxyParamCaption}
+\item[{string}]{arq, }
+\item[{{\bf Lista}$<$ {\bf Usuario} $>$ $\ast$}]{usuarios, }
+\item[{{\bf Lista}$<$ {\bf Livro} $>$ $\ast$}]{livros}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a5e8e038019f627e14b99fa0cc52618fc}{}\label{class_lista_a5e8e038019f627e14b99fa0cc52618fc}
+
+
+Tratamento de exeção para a classe \hyperlink{class_emprestimo}{Emprestimo}. 
+
+Função especifica para leitura de objetos do tipo \hyperlink{class_emprestimo}{Emprestimo}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & Contendo o nome do arquivo \\
+\hline
+{\em Lista$<$\+Usuario$>$} & Ponteiro de uma lista de usuario \\
+\hline
+{\em Lista$<$\+Livros$>$} & ponteiro de uma lista de livros\\
+\hline
+{\em arq} & Nome do arquivo a ser lido \\
+\hline
+{\em usuario} & \hyperlink{class_lista}{Lista} de usuarios \\
+\hline
+{\em livros} & \hyperlink{class_lista}{Lista} de livros \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+288                                                         \{
+289                                 
+290     fstream arquivo(arq);
+291     \textcolor{keywordtype}{string} linha;
+292 
+293     \textcolor{keywordflow}{if}(arquivo.is\_open())\{
+294         \textcolor{keywordflow}{while}(getline(arquivo, linha))\{
+295             \textcolor{comment}{//cria um vector temporario para armazenar a linha tratada}
+296             vector<string> palavras;
+297             \textcolor{comment}{// trata a linha do banco de dados}
+298             \hyperlink{lista_encadeada_8h_a23ed76470c3375dd5a2c644217911915}{tratar\_texto}(linha, palavras);
+299             \textcolor{comment}{//Criar objeto}
+300             T* novo\_node = \textcolor{keyword}{new} T(usuarios->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(palavras[0]), livros->
+      \hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(palavras[1]), stoi(palavras[2]), stoi(palavras[3]), stoi(palavras[4]));
+301             \textcolor{comment}{// limpa o vector}
+302             palavras.erase(palavras.begin(), palavras.end());
+303             \hyperlink{class_lista_ad28575300ce0ead7f45750986e9d66ed}{inserir}(novo\_node);
+304         \}
+305 
+306         arquivo.close();
+307 
+308     \}
+309     \textcolor{keywordflow}{else}\{
+310         cout << \textcolor{stringliteral}{"ARQUIVO NAO ABRIU!"} << endl;
+311     \}
+312 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!listar@{listar}}
+\index{listar@{listar}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{listar()}{listar()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::listar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a3d52d4f2e1199eef12dd28450d889b68}{}\label{class_lista_a3d52d4f2e1199eef12dd28450d889b68}
+
+
+\hyperlink{class_lista}{Lista} todos os objetos da lista. 
+
+
+\begin{DoxyCode}
+183                      \{
+184     T* curr = first->getNext(); \textcolor{comment}{//CRIA UM OBJETO PARA PERCORRER}
+185     cout << \textcolor{stringliteral}{"INICIO DA LISTA "};
+186     \textcolor{keywordflow}{while}(curr != end)\{ \textcolor{comment}{// PERCORRE IMPRIMINDO ENQUANTO NAO CHEGAR AO FINAL DA LISTA}
+187         cout << \textcolor{stringliteral}{"-----------"} << endl;
+188         cout << *curr << endl << endl;
+189         curr = curr->getNext();
+190     \}
+191     cout << \textcolor{stringliteral}{"FIM DA LISTA ----------------"} << endl << endl;
+192 
+193 \}
+\end{DoxyCode}
+\index{Lista@{Lista}!remover@{remover}}
+\index{remover@{remover}!Lista@{Lista}}
+\subsubsection[{\texorpdfstring{remover(string)}{remover(string)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Lista}$<$ T $>$\+::remover (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lista_a7ff5378a21816a595bdf4fd164c9a53b}{}\label{class_lista_a7ff5378a21816a595bdf4fd164c9a53b}
+
+
+Remove objeto da lista buscando por string. 
+
+Remove objeto da lista.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & String com o nome T\+AG do objeto\\
+\hline
+{\em s} & String com o nome do objeto generico a ser removido \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+237                               \{
+238     
+239     T* curr = first->getNext();
+240 
+241     \textcolor{keywordflow}{while}(curr->TAG != s && curr != end)\{
+242         curr = curr->getNext();
+243     \}
+244 
+245     unlink(curr);
+246     \textcolor{keyword}{delete} curr;
+247     quantidade--;
+248 
+249 \} 
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{lista_encadeada_8h}{lista\+Encadeada.\+h}\end{DoxyCompactItemize}

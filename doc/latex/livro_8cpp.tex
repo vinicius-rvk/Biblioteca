@@ -1,0 +1,96 @@
+\hypertarget{livro_8cpp}{}\section{Referência ao ficheiro src/livro.cpp}
+\label{livro_8cpp}\index{src/livro.\+cpp@{src/livro.\+cpp}}
+{\ttfamily \#include \char`\"{}livro.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{livro_8cpp_ab6d26b527a80923ca3499532a434ff72}{operator$<$$<$} (ostream \&o, \hyperlink{class_livro}{Livro} \&livro)
+\begin{DoxyCompactList}\small\item\em Sobecarga do operador $>$$>$ \end{DoxyCompactList}\item 
+istream \& \hyperlink{livro_8cpp_aa31ef9d98f7f1bb4bd8edb1fff15a674}{operator$>$$>$} (istream \&in, \hyperlink{class_livro}{Livro} \&livro)
+\begin{DoxyCompactList}\small\item\em Sobecarga do operador $<$$<$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\index{livro.\+cpp@{livro.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!livro.\+cpp@{livro.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&o, Livro \&livro)}{operator<<(ostream &o, Livro &livro)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Livro} \&}]{livro}
+\end{DoxyParamCaption}
+)}\hypertarget{livro_8cpp_ab6d26b527a80923ca3499532a434ff72}{}\label{livro_8cpp_ab6d26b527a80923ca3499532a434ff72}
+
+
+Sobecarga do operador $>$$>$ 
+
+função sorecarregada para imprimir o este objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&livro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+121                                              \{
+122    
+123     o << livro.\hyperlink{class_livro_af9521ac8f161bc215f50b0a626163105}{getTitulo}() <<\textcolor{stringliteral}{" ;"};
+124     o << livro.\hyperlink{class_livro_a47ea912e8e6ae63aedfd7c46ddb94c1b}{getAutor}() <<\textcolor{stringliteral}{" ;"};
+125     o << livro.\hyperlink{class_livro_ae575086862269d15a4edeb45986c02d3}{getEditora}() <<\textcolor{stringliteral}{" ;Ano "};
+126     o << livro.\hyperlink{class_livro_aa5ad8529cea36c240e19a063da9fceb8}{getAno}() <<\textcolor{stringliteral}{"."};
+127 
+128     \textcolor{keywordflow}{return} o;
+129 \}
+\end{DoxyCode}
+\index{livro.\+cpp@{livro.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!livro.\+cpp@{livro.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&in, Livro \&livro)}{operator>>(istream &in, Livro &livro)}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Livro} \&}]{livro}
+\end{DoxyParamCaption}
+)}\hypertarget{livro_8cpp_aa31ef9d98f7f1bb4bd8edb1fff15a674}{}\label{livro_8cpp_aa31ef9d98f7f1bb4bd8edb1fff15a674}
+
+
+Sobecarga do operador $<$$<$. 
+
+função sorecarregada para receber o este objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&in} & \\
+\hline
+{\em \&livro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+in 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+136                                               \{
+137     
+138     \textcolor{keywordtype}{string} xtitulo, xautor, xeditora, xano;
+139     cout << \textcolor{stringliteral}{"Titulo: "};
+140     in >> xtitulo;
+141     cout << \textcolor{stringliteral}{"Autor: "};
+142     in >> xautor;
+143     cout << \textcolor{stringliteral}{"Editora: "};
+144     in >> xeditora;
+145     cout << \textcolor{stringliteral}{"Ano: "};
+146     in >> xano;
+147 
+148     livro.\hyperlink{class_livro_adbae26ce6938e1f56ed6d88b458351c7}{setTitulo}(xtitulo);
+149     livro.\hyperlink{class_livro_ab6979584fef48cc9b2ca4dc0359dd69d}{setAutor}(xautor);
+150     livro.\hyperlink{class_livro_a872239a75a304f78e8b06fd3a5cb7b32}{setEditora}(xeditora);
+151     livro.\hyperlink{class_livro_a7a5d33fab8e1035fe0b3a20ab398cf54}{setAno}(xano);
+152     livro.\hyperlink{class_livro_aaa48373327454aabb96ba8d7f5835963}{TAG} = xtitulo;
+153 
+154     \textcolor{keywordflow}{return} in;
+155 \}
+\end{DoxyCode}

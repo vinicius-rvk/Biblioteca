@@ -1,0 +1,161 @@
+\hypertarget{main_8cpp}{}\section{Referência ao ficheiro src/main.cpp}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}lista\+Encadeada.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a89025be290229b5c34ae726d7c85dad2}{buscar\+\_\+livro} (\hyperlink{class_lista}{Lista}$<$ \hyperlink{class_livro}{Livro} $>$ $\ast$lista\+\_\+livro)
+\begin{DoxyCompactList}\small\item\em Funçao para operação 1. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_acd7561607e7bab0e554a5b44a9c94ccc}{cadastrar\+\_\+emprestimo} (\hyperlink{class_lista}{Lista}$<$ \hyperlink{class_emprestimo}{Emprestimo} $>$ $\ast$lista\+\_\+emprestimo, \hyperlink{class_lista}{Lista}$<$ \hyperlink{class_usuario}{Usuario} $>$ $\ast$lista\+\_\+usuario, \hyperlink{class_lista}{Lista}$<$ \hyperlink{class_livro}{Livro} $>$ $\ast$lista\+\_\+livro)
+\begin{DoxyCompactList}\small\item\em Função para a operação 2. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em Função principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\index{main.\+cpp@{main.\+cpp}!buscar\+\_\+livro@{buscar\+\_\+livro}}
+\index{buscar\+\_\+livro@{buscar\+\_\+livro}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{buscar\+\_\+livro(\+Lista$<$ Livro $>$ $\ast$lista\+\_\+livro)}{buscar_livro(Lista< Livro > *lista_livro)}}]{\setlength{\rightskip}{0pt plus 5cm}void buscar\+\_\+livro (
+\begin{DoxyParamCaption}
+\item[{{\bf Lista}$<$ {\bf Livro} $>$ $\ast$}]{lista\+\_\+livro}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a89025be290229b5c34ae726d7c85dad2}{}\label{main_8cpp_a89025be290229b5c34ae726d7c85dad2}
+
+
+Funçao para operação 1. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista\+\_\+livro} & Uma lista de livros para a busca \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14                                             \{
+15     \textcolor{keywordtype}{string} str\_1;
+16 
+17     cout << \textcolor{stringliteral}{"Titulo do livro que deseja buscar: "};
+18     cin.ignore(); \textcolor{comment}{// para nao dar erro no getline}
+19     getline(cin, str\_1);
+20     
+21     \textcolor{keywordflow}{if}(lista\_livro->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_1) != NULL)\{ \textcolor{comment}{// caso livro nao exista, sera retornado NULL}
+22         cout << *lista\_livro->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_1) << endl << endl;
+23     \}
+24     \textcolor{keywordflow}{else}\{
+25         cout << \textcolor{stringliteral}{"Livro nao encontrado."} << endl;
+26     \}
+27 \}
+\end{DoxyCode}
+\index{main.\+cpp@{main.\+cpp}!cadastrar\+\_\+emprestimo@{cadastrar\+\_\+emprestimo}}
+\index{cadastrar\+\_\+emprestimo@{cadastrar\+\_\+emprestimo}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{cadastrar\+\_\+emprestimo(\+Lista$<$ Emprestimo $>$ $\ast$lista\+\_\+emprestimo, Lista$<$ Usuario $>$ $\ast$lista\+\_\+usuario, Lista$<$ Livro $>$ $\ast$lista\+\_\+livro)}{cadastrar_emprestimo(Lista< Emprestimo > *lista_emprestimo, Lista< Usuario > *lista_usuario, Lista< Livro > *lista_livro)}}]{\setlength{\rightskip}{0pt plus 5cm}void cadastrar\+\_\+emprestimo (
+\begin{DoxyParamCaption}
+\item[{{\bf Lista}$<$ {\bf Emprestimo} $>$ $\ast$}]{lista\+\_\+emprestimo, }
+\item[{{\bf Lista}$<$ {\bf Usuario} $>$ $\ast$}]{lista\+\_\+usuario, }
+\item[{{\bf Lista}$<$ {\bf Livro} $>$ $\ast$}]{lista\+\_\+livro}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_acd7561607e7bab0e554a5b44a9c94ccc}{}\label{main_8cpp_acd7561607e7bab0e554a5b44a9c94ccc}
+
+
+Função para a operação 2. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista\+\_\+emprestimo} & \\
+\hline
+{\em lista\+\_\+usuario} & \hyperlink{class_lista}{Lista} contendo todos os usuarios \\
+\hline
+{\em lista\+\_\+livros} & \hyperlink{class_lista}{Lista} contendo todos os livros \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+36                                       \{
+37     \textcolor{keywordtype}{string} str\_1, str\_2;
+38 
+39     cout << \textcolor{stringliteral}{"Digite o nome do usuario que solicitou o emprestimo: "};
+40     cin.ignore(); \textcolor{comment}{// função de limpar o buffer para nao dar erro no getline}
+41     getline(cin, str\_1); 
+42     cin.ignore(); \textcolor{comment}{// ignora o buffer}
+43 
+44     \textcolor{keywordflow}{if}(lista\_usuario->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_1) != NULL)\{ \textcolor{comment}{// casa nao exista o usuario}
+45         
+46         cout << \textcolor{stringliteral}{"Digite o titulo do livro a ser emprestado: "};  
+47         getline(cin, str\_2);
+48 
+49         \textcolor{keywordflow}{if}(lista\_livro->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_2) != NULL)\{ \textcolor{comment}{// caso nao exista o livro}
+50             
+51             \hyperlink{class_emprestimo}{Emprestimo}* novo\_emprestimo = \textcolor{keyword}{new} \hyperlink{class_emprestimo}{Emprestimo}(lista\_usuario->
+      \hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_1), lista\_livro->\hyperlink{class_lista_a06cc21664e4ee2ec7813e01fcfe9f1c0}{buscar}(str\_2));
+52 
+53             lista\_emprestimo->\hyperlink{class_lista_ad28575300ce0ead7f45750986e9d66ed}{inserir}(novo\_emprestimo);
+54             
+55             cout << \textcolor{stringliteral}{"Emprestimo cadastrado com sucesso!"} << endl;
+56         \}\textcolor{keywordflow}{else}\{
+57             cout << \textcolor{stringliteral}{"Livro nao encontrado no nosso banco de dados."} << endl;
+58         \}
+59     \}\textcolor{keywordflow}{else} \{
+60         cout << \textcolor{stringliteral}{"Usuario não cadastrado."} << endl;
+61     \}
+62 \}
+\end{DoxyCode}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Função principal. 
+
+
+\begin{DoxyCode}
+67                \{
+68     \textcolor{keywordtype}{int} operacao; \textcolor{comment}{// variavel para ser usada na seleção da operação desejada}
+69 
+70     \textcolor{keywordtype}{string} banco\_livro = \textcolor{stringliteral}{"livros.txt"}; \textcolor{comment}{// Nome do arquivo}
+71     \textcolor{keywordtype}{string} banco\_usuario = \textcolor{stringliteral}{"usuario.txt"}; \textcolor{comment}{// Nome do arquivo}
+72     \textcolor{keywordtype}{string} banco\_emprestimo = \textcolor{stringliteral}{"emprestimo.txt"}; \textcolor{comment}{// Nome do arquivo}
+73 
+74     \hyperlink{class_lista}{Lista<Usuario>}* lista\_usuario = \textcolor{keyword}{new} \hyperlink{class_lista}{Lista<Usuario>}(); 
+75     \hyperlink{class_lista}{Lista<Livro>}* lista\_livro = \textcolor{keyword}{new} \hyperlink{class_lista}{Lista<Livro>}();
+76     \hyperlink{class_lista}{Lista<Emprestimo>}* lista\_emprestimo = \textcolor{keyword}{new} \hyperlink{class_lista}{Lista<Emprestimo>}();
+77 
+78     lista\_usuario->\hyperlink{class_lista_ae3773452776dd52eb86684969cbf5a79}{ler\_banco}(banco\_usuario);
+79     lista\_livro->\hyperlink{class_lista_ae3773452776dd52eb86684969cbf5a79}{ler\_banco}(banco\_livro);
+80     lista\_emprestimo->\hyperlink{class_lista_a5e8e038019f627e14b99fa0cc52618fc}{ler\_emprestimo}(banco\_emprestimo, lista\_usuario, lista\_livro);
+81 
+82 
+83 \textcolor{comment}{/*}
+84 \textcolor{comment}{*/}
+85     cout << \textcolor{stringliteral}{"Operaçoes ----"} << endl;
+86     cout << \textcolor{stringliteral}{"(1) - Buscar livro."} << endl;
+87     cout << \textcolor{stringliteral}{"(2) - Realizar emprestimo."} << endl;
+88     cout << \textcolor{stringliteral}{"(3) - Emprestimos atrasados."} << endl;
+89     cin >> operacao;
+90 
+91     \textcolor{keywordflow}{switch} (operacao)\{
+92         \textcolor{keywordflow}{case} 1 :
+93                 \hyperlink{main_8cpp_a89025be290229b5c34ae726d7c85dad2}{buscar\_livro}(lista\_livro);
+94                 \textcolor{keywordflow}{break};
+95         \textcolor{keywordflow}{case} 2 :
+96                 \hyperlink{main_8cpp_acd7561607e7bab0e554a5b44a9c94ccc}{cadastrar\_emprestimo}(lista\_emprestimo, lista\_usuario, lista\_livro);
+97                 \textcolor{keywordflow}{break};
+98         \textcolor{keywordflow}{case} 3 :
+99                 lista\_emprestimo->\hyperlink{class_lista_acf387f2919c79e5ed8f8c17ab657f1a1}{atrasados}();
+100                 \textcolor{keywordflow}{break};
+101         \textcolor{keywordflow}{default}: 
+102                 cout << \textcolor{stringliteral}{"Operação não existente."};
+103     \}       
+104 
+105     
+106     
+107 
+108     \textcolor{comment}{//cout << "Deu certo, Vlww!" << endl;}
+109 
+110     \textcolor{keywordflow}{return} 0;
+111 \}
+\end{DoxyCode}

@@ -1,0 +1,438 @@
+\hypertarget{class_emprestimo}{}\section{Referência à classe Emprestimo}
+\label{class_emprestimo}\index{Emprestimo@{Emprestimo}}
+
+
+Objeto com a finalidade de guardar um registro de emprestimo.  
+
+
+
+
+{\ttfamily \#include $<$emprestimo.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_emprestimo_a1616ab12bb52641312da3eda7cf65a16}{Emprestimo} ()
+\item 
+\hyperlink{class_emprestimo_a1ec18d0cc6acc6ff3699fbd8a40d44f4}{Emprestimo} (\hyperlink{class_usuario}{Usuario} $\ast$, \hyperlink{class_livro}{Livro} $\ast$, int, int, int)
+\begin{DoxyCompactList}\small\item\em Costroi um objeto com informaçoes completas. Recebe um ponteiro de um objeto do tipo \hyperlink{class_usuario}{Usuario} e do tipo \hyperlink{class_livro}{Livro}, inteiros para data. Utilizado mais para leitra de banco de dados. \end{DoxyCompactList}\item 
+\hyperlink{class_emprestimo_aff4befdfe5863640b597ade37f492212}{Emprestimo} (\hyperlink{class_usuario}{Usuario} $\ast$, \hyperlink{class_livro}{Livro} $\ast$)
+\begin{DoxyCompactList}\small\item\em Costroi um objeto recebendo dois objetos dos tipos \hyperlink{class_usuario}{Usuario} e \hyperlink{class_livro}{Livro} Recebe um ponteiro de um objeto do tipo \hyperlink{class_usuario}{Usuario} e do tipo \hyperlink{class_livro}{Livro}. Utilizado para cadastrar um novo obeto manualmene (desde que usuario e livro estejam cadastrados) \end{DoxyCompactList}\item 
+\hyperlink{class_emprestimo_a3112936af81ada69746c1eb3ffa496c9}{$\sim$\+Emprestimo} ()
+\item 
+\hyperlink{class_livro}{Livro} $\ast$ \hyperlink{class_emprestimo_ae38842ee822774d87f2ec4eeff34013c}{get\+Livro} (void)
+\begin{DoxyCompactList}\small\item\em função para retornar o objeto \hyperlink{class_livro}{Livro} \end{DoxyCompactList}\item 
+\hyperlink{class_usuario}{Usuario} $\ast$ \hyperlink{class_emprestimo_ad049b5c858bf11c26df0417faf4d0a0a}{get\+Usuario} (void)
+\begin{DoxyCompactList}\small\item\em função para retornar o objeto \hyperlink{class_usuario}{Usuario} \end{DoxyCompactList}\item 
+\hyperlink{class_emprestimo}{Emprestimo} $\ast$ \hyperlink{class_emprestimo_abf2c1c517edcf68121f790ea6516db8f}{get\+Next} ()
+\begin{DoxyCompactList}\small\item\em função para retornar o objeto proximo em uma lista encadeada \end{DoxyCompactList}\item 
+\hyperlink{class_emprestimo}{Emprestimo} $\ast$ \hyperlink{class_emprestimo_a01db0d6d53d8bcc359a0ff89bb6e43e2}{get\+Previous} ()
+\begin{DoxyCompactList}\small\item\em função para retornar o objeto anterior em uma lista ecadeada \end{DoxyCompactList}\item 
+int \hyperlink{class_emprestimo_a42220fac9fa79bf33b6caa60128dbfe7}{get\+Dia} ()
+\begin{DoxyCompactList}\small\item\em função para retornar o dia de devolução do livro \end{DoxyCompactList}\item 
+int \hyperlink{class_emprestimo_a80456349d79e0a78085622ffcb0b737d}{get\+Mes} ()
+\begin{DoxyCompactList}\small\item\em função para retornar o mes de devolução do livro \end{DoxyCompactList}\item 
+int \hyperlink{class_emprestimo_a781b58a23822c60a3881ff889c70b59c}{get\+Ano} ()
+\begin{DoxyCompactList}\small\item\em função para retornar o ano de devolução do livro \end{DoxyCompactList}\item 
+void \hyperlink{class_emprestimo_a22f0c42b4b19198df0f82fd597cb4c90}{set\+Livro} (\hyperlink{class_livro}{Livro} $\ast$)
+\begin{DoxyCompactList}\small\item\em função para modificar o objeto \hyperlink{class_livro}{Livro} \end{DoxyCompactList}\item 
+void \hyperlink{class_emprestimo_a73fd99ddedbc367d50bd6266227aa0c1}{set\+Usuario} (\hyperlink{class_usuario}{Usuario} $\ast$)
+\begin{DoxyCompactList}\small\item\em função para modificar o objeto \hyperlink{class_usuario}{Usuario} \end{DoxyCompactList}\item 
+void \hyperlink{class_emprestimo_a25153a3857d3f1acdc93ae4a7e1d088f}{set\+Next} (\hyperlink{class_emprestimo}{Emprestimo} $\ast$proximo)
+\begin{DoxyCompactList}\small\item\em função para modificar o objeto proximo em uma lista encadeada \end{DoxyCompactList}\item 
+void \hyperlink{class_emprestimo_adba8bb7ad5ab611484ca09dcdc914d7d}{set\+Previous} (\hyperlink{class_emprestimo}{Emprestimo} $\ast$anterior)
+\begin{DoxyCompactList}\small\item\em função para modificar o objeto anterior em uma lista encadeada \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_emprestimo_ada62ac295c20ff48788976bdc6d041e5}{operator$<$$<$} (ostream \&, \hyperlink{class_emprestimo}{Emprestimo} \&)
+\begin{DoxyCompactList}\small\item\em função sobrecarregada para imprimir o objeto \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Objeto com a finalidade de guardar um registro de emprestimo. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{Emprestimo()}{Emprestimo()}}]{\setlength{\rightskip}{0pt plus 5cm}Emprestimo\+::\+Emprestimo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a1616ab12bb52641312da3eda7cf65a16}{}\label{class_emprestimo_a1616ab12bb52641312da3eda7cf65a16}
+Função de apontar para o anterior em uma lista Costructor Costroi um objeto vazio
+
+Costrutor de um objeto vazio 
+\begin{DoxyCode}
+12                       :livro(), 
+13                             usuario(),
+14                             next(NULL),
+15                             previous(NULL)
+16                             \{\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{Emprestimo(\+Usuario $\ast$, Livro $\ast$, int, int, int)}{Emprestimo(Usuario *, Livro *, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Emprestimo\+::\+Emprestimo (
+\begin{DoxyParamCaption}
+\item[{{\bf Usuario} $\ast$}]{usuario, }
+\item[{{\bf Livro} $\ast$}]{livro, }
+\item[{int}]{dia, }
+\item[{int}]{mes, }
+\item[{int}]{ano}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a1ec18d0cc6acc6ff3699fbd8a40d44f4}{}\label{class_emprestimo_a1ec18d0cc6acc6ff3699fbd8a40d44f4}
+
+
+Costroi um objeto com informaçoes completas. Recebe um ponteiro de um objeto do tipo \hyperlink{class_usuario}{Usuario} e do tipo \hyperlink{class_livro}{Livro}, inteiros para data. Utilizado mais para leitra de banco de dados. 
+
+Construtor de um objeto a patir de objetos e inteiros.
+
+Costructor
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em usuario} & Objeto do tipo \hyperlink{class_usuario}{Usuario} \\
+\hline
+{\em livro} & Objeto do tipo \hyperlink{class_livro}{Livro} \\
+\hline
+{\em dia} & Dia da devolição \\
+\hline
+{\em mes} & Mes da devolição \\
+\hline
+{\em ano} & Ano da devolição \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+26                                                                      :
+27                                 livro(livro),
+28                                 usuario(usuario),
+29                                 next(NULL),
+30                                 previous(NULL)
+31                                 \{
+32                                     emprestimo.\hyperlink{structdata_ac514ae966b758141957f8254bdd7850b}{dia} = dia;
+33                                     emprestimo.\hyperlink{structdata_ad0f682acbc0199c05dc584f887f580a1}{mes} = mes;
+34                                     emprestimo.\hyperlink{structdata_a2898507d44bff1cd51afb7dd562d2378}{ano} = ano;
+35                                 \}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\index{Emprestimo@{Emprestimo}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{Emprestimo(\+Usuario $\ast$, Livro $\ast$)}{Emprestimo(Usuario *, Livro *)}}]{\setlength{\rightskip}{0pt plus 5cm}Emprestimo\+::\+Emprestimo (
+\begin{DoxyParamCaption}
+\item[{{\bf Usuario} $\ast$}]{usuario, }
+\item[{{\bf Livro} $\ast$}]{livro}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_aff4befdfe5863640b597ade37f492212}{}\label{class_emprestimo_aff4befdfe5863640b597ade37f492212}
+
+
+Costroi um objeto recebendo dois objetos dos tipos \hyperlink{class_usuario}{Usuario} e \hyperlink{class_livro}{Livro} Recebe um ponteiro de um objeto do tipo \hyperlink{class_usuario}{Usuario} e do tipo \hyperlink{class_livro}{Livro}. Utilizado para cadastrar um novo obeto manualmene (desde que usuario e livro estejam cadastrados) 
+
+Construtor de um objeto a patir de objetos e inteiros.
+
+Costructor
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em usuario} & Objeto do tipo \hyperlink{class_usuario}{Usuario} \\
+\hline
+{\em livro} & Objeto do tipo \hyperlink{class_livro}{Livro} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+41                                                     :
+42                             livro(livro),
+43                             usuario(usuario),
+44                             next(NULL),
+45                             previous(NULL)
+46                             \{
+47                                 cout << \textcolor{stringliteral}{"dia da devolução: "};
+48                                 cin >> emprestimo.\hyperlink{structdata_ac514ae966b758141957f8254bdd7850b}{dia};
+49                                 cout << \textcolor{stringliteral}{"mes da devolução: "};
+50                                 cin >> emprestimo.\hyperlink{structdata_ad0f682acbc0199c05dc584f887f580a1}{mes};
+51                                 cout << \textcolor{stringliteral}{"Ano da devolução: "};
+52                                 cin >> emprestimo.\hyperlink{structdata_a2898507d44bff1cd51afb7dd562d2378}{ano}; 
+53                             \}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!````~Emprestimo@{$\sim$\+Emprestimo}}
+\index{````~Emprestimo@{$\sim$\+Emprestimo}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{$\sim$\+Emprestimo()}{~Emprestimo()}}]{\setlength{\rightskip}{0pt plus 5cm}Emprestimo\+::$\sim$\+Emprestimo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a3112936af81ada69746c1eb3ffa496c9}{}\label{class_emprestimo_a3112936af81ada69746c1eb3ffa496c9}
+Deleta o objeto alocado 
+\begin{DoxyCode}
+58 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentação dos métodos}
+\index{Emprestimo@{Emprestimo}!get\+Ano@{get\+Ano}}
+\index{get\+Ano@{get\+Ano}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Ano()}{getAno()}}]{\setlength{\rightskip}{0pt plus 5cm}int Emprestimo\+::get\+Ano (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a781b58a23822c60a3881ff889c70b59c}{}\label{class_emprestimo_a781b58a23822c60a3881ff889c70b59c}
+
+
+função para retornar o ano de devolução do livro 
+
+Fução para retornar a variavel ano do usuario.
+
+\begin{DoxyReturn}{Retorna}
+ano 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+94 \{\textcolor{keywordflow}{return} emprestimo.\hyperlink{structdata_a2898507d44bff1cd51afb7dd562d2378}{ano};\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Dia@{get\+Dia}}
+\index{get\+Dia@{get\+Dia}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Dia()}{getDia()}}]{\setlength{\rightskip}{0pt plus 5cm}int Emprestimo\+::get\+Dia (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a42220fac9fa79bf33b6caa60128dbfe7}{}\label{class_emprestimo_a42220fac9fa79bf33b6caa60128dbfe7}
+
+
+função para retornar o dia de devolução do livro 
+
+Fução para retornar a variavel dia do usuario.
+
+\begin{DoxyReturn}{Retorna}
+dia 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+84 \{\textcolor{keywordflow}{return} emprestimo.\hyperlink{structdata_ac514ae966b758141957f8254bdd7850b}{dia};\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Livro@{get\+Livro}}
+\index{get\+Livro@{get\+Livro}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Livro(void)}{getLivro(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Livro} $\ast$ Emprestimo\+::get\+Livro (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_ae38842ee822774d87f2ec4eeff34013c}{}\label{class_emprestimo_ae38842ee822774d87f2ec4eeff34013c}
+
+
+função para retornar o objeto \hyperlink{class_livro}{Livro} 
+
+Fução para retornar o ponteiro do objeto usuario.
+
+\begin{DoxyReturn}{Retorna}
+livro 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+69 \{ \textcolor{keywordflow}{return} this->livro;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Mes@{get\+Mes}}
+\index{get\+Mes@{get\+Mes}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Mes()}{getMes()}}]{\setlength{\rightskip}{0pt plus 5cm}int Emprestimo\+::get\+Mes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a80456349d79e0a78085622ffcb0b737d}{}\label{class_emprestimo_a80456349d79e0a78085622ffcb0b737d}
+
+
+função para retornar o mes de devolução do livro 
+
+Fução para retornar a variavel mes do usuario.
+
+\begin{DoxyReturn}{Retorna}
+mes 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+89 \{\textcolor{keywordflow}{return} emprestimo.\hyperlink{structdata_ad0f682acbc0199c05dc584f887f580a1}{mes};\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Next()}{getNext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Emprestimo} $\ast$ Emprestimo\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_abf2c1c517edcf68121f790ea6516db8f}{}\label{class_emprestimo_abf2c1c517edcf68121f790ea6516db8f}
+
+
+função para retornar o objeto proximo em uma lista encadeada 
+
+Fução para retornar o ponteiro da variavel next do usuario.
+
+\begin{DoxyReturn}{Retorna}
+next 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+74 \{\textcolor{keywordflow}{return} this->next;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Previous@{get\+Previous}}
+\index{get\+Previous@{get\+Previous}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Previous()}{getPrevious()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Emprestimo} $\ast$ Emprestimo\+::get\+Previous (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a01db0d6d53d8bcc359a0ff89bb6e43e2}{}\label{class_emprestimo_a01db0d6d53d8bcc359a0ff89bb6e43e2}
+
+
+função para retornar o objeto anterior em uma lista ecadeada 
+
+Fução para retornar o ponteiro da variavel previous do usuario.
+
+\begin{DoxyReturn}{Retorna}
+previous 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+79 \{\textcolor{keywordflow}{return} this->previous;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!get\+Usuario@{get\+Usuario}}
+\index{get\+Usuario@{get\+Usuario}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{get\+Usuario(void)}{getUsuario(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Usuario} $\ast$ Emprestimo\+::get\+Usuario (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_ad049b5c858bf11c26df0417faf4d0a0a}{}\label{class_emprestimo_ad049b5c858bf11c26df0417faf4d0a0a}
+
+
+função para retornar o objeto \hyperlink{class_usuario}{Usuario} 
+
+Fução para retornar o ponteiro do objeto usuario.
+
+\begin{DoxyReturn}{Retorna}
+usuario 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+64 \{ \textcolor{keywordflow}{return} this->usuario;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!set\+Livro@{set\+Livro}}
+\index{set\+Livro@{set\+Livro}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{set\+Livro(\+Livro $\ast$)}{setLivro(Livro *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Emprestimo\+::set\+Livro (
+\begin{DoxyParamCaption}
+\item[{{\bf Livro} $\ast$}]{livro}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a22f0c42b4b19198df0f82fd597cb4c90}{}\label{class_emprestimo_a22f0c42b4b19198df0f82fd597cb4c90}
+
+
+função para modificar o objeto \hyperlink{class_livro}{Livro} 
+
+Função para modificar o ponteiro da variavel livro do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em livro} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+105 \{this->livro = livro;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{set\+Next(\+Emprestimo $\ast$proximo)}{setNext(Emprestimo *proximo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Emprestimo\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Emprestimo} $\ast$}]{proximo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a25153a3857d3f1acdc93ae4a7e1d088f}{}\label{class_emprestimo_a25153a3857d3f1acdc93ae4a7e1d088f}
+
+
+função para modificar o objeto proximo em uma lista encadeada 
+
+Função para modificar o ponteiro da variavel next do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em next} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+110 \{this->next = proximo;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!set\+Previous@{set\+Previous}}
+\index{set\+Previous@{set\+Previous}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{set\+Previous(\+Emprestimo $\ast$anterior)}{setPrevious(Emprestimo *anterior)}}]{\setlength{\rightskip}{0pt plus 5cm}void Emprestimo\+::set\+Previous (
+\begin{DoxyParamCaption}
+\item[{{\bf Emprestimo} $\ast$}]{anterior}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_adba8bb7ad5ab611484ca09dcdc914d7d}{}\label{class_emprestimo_adba8bb7ad5ab611484ca09dcdc914d7d}
+
+
+função para modificar o objeto anterior em uma lista encadeada 
+
+Função para modificar o ponteiro da variavel previous do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em previous} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+115 \{this->previous = anterior;\}
+\end{DoxyCode}
+\index{Emprestimo@{Emprestimo}!set\+Usuario@{set\+Usuario}}
+\index{set\+Usuario@{set\+Usuario}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{set\+Usuario(\+Usuario $\ast$)}{setUsuario(Usuario *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Emprestimo\+::set\+Usuario (
+\begin{DoxyParamCaption}
+\item[{{\bf Usuario} $\ast$}]{usuario}
+\end{DoxyParamCaption}
+)}\hypertarget{class_emprestimo_a73fd99ddedbc367d50bd6266227aa0c1}{}\label{class_emprestimo_a73fd99ddedbc367d50bd6266227aa0c1}
+
+
+função para modificar o objeto \hyperlink{class_usuario}{Usuario} 
+
+Função para modificar o ponteiro da variavel usuario do objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em usuario} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+100 \{this->usuario = usuario;\}
+\end{DoxyCode}
+
+
+\subsection{Documentação das classes amigas e funções relacionadas}
+\index{Emprestimo@{Emprestimo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Emprestimo@{Emprestimo}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{o, }
+\item[{{\bf Emprestimo} \&}]{emprestimo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_emprestimo_ada62ac295c20ff48788976bdc6d041e5}{}\label{class_emprestimo_ada62ac295c20ff48788976bdc6d041e5}
+
+
+função sobrecarregada para imprimir o objeto 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \&o} & \\
+\hline
+{\em \&emprestimo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+125                                                        \{
+126     o << \textcolor{stringliteral}{"USUARIO: "} << endl << *emprestimo.\hyperlink{class_emprestimo_ad049b5c858bf11c26df0417faf4d0a0a}{getUsuario}() << endl;
+127     o << \textcolor{stringliteral}{"LIVRO: "} << endl << *emprestimo.\hyperlink{class_emprestimo_ae38842ee822774d87f2ec4eeff34013c}{getLivro}() << endl;
+128 
+129     \textcolor{keywordflow}{return} o;
+130 \}
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{emprestimo_8h}{emprestimo.\+h}\item 
+src/\hyperlink{emprestimo_8cpp}{emprestimo.\+cpp}\end{DoxyCompactItemize}
